@@ -19,9 +19,11 @@ end)
 
 
 local mes = Instance.new("Message", workspace)
-mes.Text = "ESP LOADED"
+mes.Text = "ESP LOADED, For more scripts check your console (F9) for the discord"
 wait(1)
 mes:Destroy()
+
+print("https://discord.gg/czXkbCS")
 
 if options["Locations"] then
 	for _, v in pairs(workspace.Markers:GetDescendants()) do
