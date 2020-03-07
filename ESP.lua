@@ -20,7 +20,7 @@ end)
 
 local mes = Instance.new("Message", workspace)
 mes.Text = "ESP LOADED, For more scripts check your console (F9) for the discord"
-wait(1)
+wait(2)
 mes:Destroy()
 
 print("https://discord.gg/czXkbCS")
