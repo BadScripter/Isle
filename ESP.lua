@@ -25,7 +25,7 @@ mes:Destroy()
 
 print("https://discord.gg/czXkbCS")
 
-if options["Locations"] then
+if _G.options["Locations"] then
 	for _, v in pairs(workspace.Markers:GetDescendants()) do
 		if v:IsA("BillboardGui") then
 			v.Enabled = true
@@ -38,7 +38,7 @@ local m = game.Players.LocalPlayer:GetMouse()
 m.KeyDown:connect(function(k)
 	k = k:lower()
 	if k == "b" then
-		if options["Hunters"] then
+		if _G.options["Hunters"] then
 			for i,v in pairs(game.Workspace.AIHunter:GetDescendants()) do
 				if v:IsA("BasePart") and v.Name == "HumanoidRootPart" then
 					local b1 = Instance.new("BillboardGui")
@@ -59,7 +59,7 @@ m.KeyDown:connect(function(k)
 					TextLabel.TextScaled = true
 				end
 			end
-		elseif options["Traps"] then
+		elseif _G.options["Traps"] then
 			for i, v in pairs(workspace:GetChildren()) do 
 				if v.Name:find("Trap") or v.Name:find("Tripwire") then 
 					if v:FindFirstChildWhichIsA("BasePart") then 
@@ -82,7 +82,7 @@ m.KeyDown:connect(function(k)
 					end
 				end
 			end
-		elseif options["Items"] then
+		elseif _G.options["Items"] then
 			for i, v in pairs(workspace.Tools:GetChildren()) do 
 				if v:FindFirstChild("Handle") then 
 					local b3 = Instance.new("BillboardGui")
@@ -103,7 +103,7 @@ m.KeyDown:connect(function(k)
 					TextLabel.TextScaled = true
 				end
 			end
-		elseif options["Threats"] then
+		elseif _G.options["Threats"] then
 			for i, v in pairs(workspace.Threats:GetDescendants()) do 
 				if v.Name:find("HumanoidRootPart") then 
 					local b4 = Instance.new("BillboardGui")
